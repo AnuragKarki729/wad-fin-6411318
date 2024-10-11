@@ -130,19 +130,12 @@ export default function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             <Button
               key={1}
-              onClick={() => router.push('/product')}
+              onClick={() => router.push('/')}
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
               Customers
             </Button>
 
-            <Button
-              key={2}
-              onClick={() => router.push('/category')}
-              sx={{ my: 2, color: 'white', display: 'block' }}
-            >
-              Categories
-            </Button>
 
             {/* {pages.map((page) => (
               <Button
