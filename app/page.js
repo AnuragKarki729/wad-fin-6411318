@@ -14,6 +14,10 @@ export default function Home() {
   const [editmode, setEditMode] = useState(false)
   const [editID, setEditID] = useState(null)
 
+  useEffect(() => {
+    fetchCustomers();
+  }, []);
+
   async function fetchCustomers() {
     const data = await fetch(`${API_BASE}/customer`);
     // const data = await fetch(`http://localhost:3000/product`);
@@ -70,9 +74,7 @@ export default function Home() {
     fetchCustomers();
   }
 
-  useEffect(() => {
-    fetchCustomers();
-  }, []);
+  
 
 
   return (
